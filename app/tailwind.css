@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply font-geist
+   bg-black;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+.gradient-primary {
+  background:  linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(255, 255, 255, 0.1) 100%),
+  radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(6, 229, 255, 1) 100%);
+  
+}
+
+.gradient-secondary-text {
+  background: linear-gradient(90deg, rgba(255,78,33,1) 10%, rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-primary-text {
+  background: linear-gradient(90deg, rgba(6, 229, 255, 1) 10%, rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.flex-60 {
+  flex: 1 1 60%;
+}
+
+.flex-40 {
+  flex: 1 1 40%;
+}
+
+.dotted-background {
+  position: relative;
+  background-image: radial-gradient(circle, rgba(29, 29, 29, 1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Dot size */
+  height: 100vh; /* Full height of viewport */
+  width: 100%; /* Full width of the container */
+}
