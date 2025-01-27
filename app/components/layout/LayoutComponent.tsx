@@ -5,7 +5,9 @@ interface LayoutComponentProps {
   }
   
   const LayoutComponent: React.FC<LayoutComponentProps> = ({ children }) => {
-    return <div className="flex h-screen w-screen">{children}</div>;
+    return <div className="h-full">
+        <div className="flex flex-col md:flex-row">{children}</div>
+      </div>
   }
 
 export default LayoutComponent

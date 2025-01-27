@@ -11,6 +11,10 @@ import graphqlImg from './../../assets/graphql.png';
 import kubernetsImg from './../../assets/kubernets.png';
 import liefImg from './../../assets/lief.png';
 import kasiImg from './../../assets/kasi.png';
+import plusImg from './../../assets/plus.png';
+import shopifyImg from './../../assets/shopify.png';
+import tImg from './../../assets/t.png';
+import bearImg from './../../assets/bear.png';
 
 interface IconContainerComponentProps {
   big?: boolean;
@@ -22,18 +26,22 @@ const IconContainerComponent: React.FC<IconContainerComponentProps> = ({ big = f
     { imgSrc: reactImg, alt: 'React' },
     { imgSrc: aaImg, alt: 'AA' },
     { imgSrc: sImg, alt: 'S' },
+    { imgSrc: plusImg, alt: 'Plus'},
+    { imgSrc: shopifyImg, alt: 'Shopify'},
     { imgSrc: nextjsImg, alt: 'NextJS' },
     { imgSrc: terraformImg, alt: 'Terraform' },
+    { imgSrc: tImg, alt: 'T'},
     { imgSrc: wordpressImg, alt: 'WordPress' },
     { imgSrc: graphqlImg, alt: 'GraphQL' },
     { imgSrc: kubernetsImg, alt: 'Kubernetes' },
-    { imgSrc: liefImg, alt: 'Lief' }
+    { imgSrc: liefImg, alt: 'Lief' },
+    { imgSrc: bearImg, alt: 'Bear'}
   ];
 
   const iconsToRender = layout === 'single' ? [{ imgSrc: kasiImg, alt: 'Kasi' }] : icons;
 
   return (
-    <div className="flex mb-2 items-center">
+    <div className="flex mb-2 items-center flex-wrap">
       {iconsToRender.map((icon, index) => (
         <React.Fragment key={index}>
           <IconComponent imgSrc={icon.imgSrc} alt={icon.alt} big={big} />
